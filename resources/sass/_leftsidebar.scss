@@ -1,0 +1,200 @@
+.leftsidebar {
+    // margin-top: 57px;
+    transition: all 0.2s ease-out;
+    width: 235px;
+    z-index: 1000;
+
+    @include media-breakpoint-up(lg) {
+        display: block !important;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    background-color: $white;
+    // height: 800px;
+    box-shadow: 1px 0px 13px 0px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 91.5vh;
+    /*
+      @START@  left sidebar nav section fomatting
+    */
+    &-nav {
+        padding-top: 10px;
+        ul {
+            li {
+                transition: background 0.4s ease-out;
+                &:active {
+                    background: $gray-300;
+                }
+                @include media-breakpoint-down(lg) {
+                    margin: 0px;
+                    min-width: 0;
+                    transition: min-width 0.3s ease-out;
+                    &:hover {
+                        display: block !important;
+                        min-width: 200px !important;
+                        background: $active-link-color;
+                        a {
+                            position: relative;
+                            color: $white !important;
+                            .text {
+                                position: absolute;
+                                display: block !important;
+                                top: -4px;
+                                color: $white;
+                                left: 30px;
+                                min-width: 100px;
+                            }
+                        }
+                    }
+                }
+                padding: 10px 20px;
+                margin: 10px;
+                display: block;
+                cursor: pointer;
+                &:hover a {
+                    color: $active-link-color;
+                }
+                @include border-radius(3px);
+
+                a {
+                    color: $sidebar-text-color;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    @include media-breakpoint-down(lg) {
+                        .text {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    .mdi {
+                        margin-right: 7px;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+    /*
+      @END@  left sidebar nav section fomatting
+    */
+    /*
+      @START@  left sidebar footer section fomatting
+    */
+    &-footer {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        background: $bodycolor;
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) and (max-width: 1199px) {
+            height: 55px;
+            padding: 0 3px;
+            bottom: 2px;
+            ul {
+                li {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        padding: 17px 3px;
+        border-top: 1px solid $gray-300;
+        ul {
+            list-style-type: none;
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    /*
+      @END@  left sidebar footer section fomatting
+    */
+}
+.leftsidebar.yes {
+    display: none;
+}
+
+.leftsidebar.no {
+    @include media-breakpoint-down(lg) {
+        width: 235px;
+    }
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+    /*
+      @START@  left sidebar nav section fomatting
+    */
+    .leftsidebar-nav {
+        ul {
+            li {
+                min-width: 200px;
+                @include media-breakpoint-down(lg) {
+                    min-width: 200px;
+                    //   background: #000;
+
+                    a {
+                        position: relative;
+                        span.text {
+                            //   color: $white !important;
+                            display: inline-block;
+                            position: relative;
+                        }
+                    }
+                    &:hover {
+                        min-width: 200px !important;
+                        background: $active-link-color;
+                        a {
+                            position: relative;
+
+                            .text {
+                                position: absolute;
+                                display: inline-block;
+                                top: -3px;
+                                color: $white !important;
+                                left: 32px;
+                            }
+                        }
+                    }
+                }
+                padding: 10px 20px;
+                margin: 10px;
+                display: block;
+                cursor: pointer;
+                &:hover a {
+                    color: $active-link-color;
+                }
+                @include border-radius(3px);
+
+                a {
+                    font-weight: 300;
+                    font-size: 1rem;
+                    @include media-breakpoint-down(lg) {
+                        .text {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    .mdi {
+                        margin-right: 7px;
+                        font-size: 1.3rem;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+      @END@  left sidebar nav section fomatting
+    */
+}

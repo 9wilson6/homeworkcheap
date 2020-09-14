@@ -1,0 +1,319 @@
+﻿//Margin
+@for $i from -25 through 25 {
+    .ml-#{$i * 5} {
+        margin-left: #{$i * 5}px;
+    }
+
+    .mt-#{$i * 5} {
+        margin-top: #{$i * 5}px;
+    }
+
+    .mr-#{$i * 5} {
+        margin-right: #{$i * 5}px;
+    }
+
+    .mb-#{$i * 5} {
+        margin-bottom: #{$i * 5}px;
+    }
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+@for $i from 0 through 25 {
+    .pl-#{$i * 5} {
+        padding-left: #{$i * 5}px;
+    }
+
+    .pt-#{$i * 5} {
+        padding-top: #{$i * 5}px;
+    }
+
+    .pr-#{$i * 5} {
+        padding-right: #{$i * 5}px;
+    }
+
+    .pb-#{$i * 5} {
+        padding-bottom: #{$i * 5}px;
+    }
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+@for $i from 5 through 49 {
+    .font-#{$i + 1} {
+        font-size: #{$i + 1}px;
+    }
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+.no-resize {
+    resize: none;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.font-underline {
+    text-decoration: underline;
+}
+
+.font-line-through {
+    text-decoration: line-through;
+}
+
+.font-overline {
+    text-decoration: overline;
+}
+
+.block-header {
+    margin-bottom: 15px;
+
+    h2 {
+        margin: 0 !important;
+        color: #666 !important;
+        font-weight: normal;
+        font-size: 16px;
+
+        small {
+            display: block;
+            font-size: 12px;
+            margin-top: 8px;
+            color: #888;
+
+            a {
+                font-weight: bold;
+                color: #777;
+            }
+        }
+    }
+}
+
+@each $key, $val in $colors {
+    .bg-#{$key} {
+        background-color: $val !important;
+        color: #fff;
+
+        .content {
+            .text,
+            .number {
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val !important;
+    }
+}
+/*
+@@START@@ Active class mainly for left side navbar
+*/
+.active_class {
+    background-color: $active-link-color;
+    box-shadow: 0px 2px 11px 2px rgba(128, 125, 125, 0.2);
+    a {
+        color: $white !important;
+    }
+}
+/*
+@@END@@ Active class mainly for left side navbar
+*/
+
+/*
+@@Start@@ Disable text selection
+*/
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*
+@@End@@ Disable text selection
+*/
+
+/*
+@@Start@@ white box
+*/
+.white-box {
+    background: #fff;
+    border-radius: 7px;
+    padding: 12px;
+}
+/*
+@@End@@ white box
+*/
+
+/*
+@@Start@@ gray box
+*/
+.gray-box {
+    box-sizing: border-box;
+    background: $gray-200;
+    border-radius: 7px;
+    padding: 10px;
+}
+/*
+@@End@@ gray box
+*/
+/*
+@@Start@@ heading four formatting
+*/
+.heading-4 {
+    font-weight: bolder;
+    color: $dark-blue;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+/*
+@@END@@ heading four formatting
+*/
+
+hr {
+    width: 100%;
+    height: 0.03rem;
+    background-color: $gray-200;
+    margin-top: -2px;
+}
+th.long,
+td.long {
+    display: block;
+    max-width: 550px !important;
+}
+
+/*
+@@START@@ rating start
+*/
+.rating {
+    height: 15px;
+    min-width: 100px;
+    display: inline-block;
+    background: url("./assets/star-rating.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px 0;
+}
+/*
+@@START@@ rating start
+*/
+
+/*
+@@START
+font weight lighter
+*/
+.font-weight-lighter {
+    font-weight: 100;
+    font-size: 0.85rem;
+}
+/*
+@@END@@
+*/
+/*
+@@START
+tooltips
+*/
+.tooltip-container {
+    display: inline;
+    position: relative;
+    .tooltip-icon {
+        font-size: 1.1rem;
+        &:hover ~ .tooltip-text {
+            display: inline;
+        }
+    }
+    .tooltip-text {
+        display: none;
+        position: absolute;
+        top: -80%;
+        left: 20%;
+        transform: translate(-50%, -90%);
+        background: #333333;
+        width: 280px;
+        color: $white;
+        font-size: 0.6rem;
+        text-align: center;
+        padding: 3px 6px;
+        border-radius: 5px;
+        &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 10px solid #333333;
+            width: 10px;
+            border-left: 7px solid transparent;
+            bottom: -5px;
+            left: 52%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
+}
+/*
+
+@@END@@
+*/
+
+/*****************************Rating start***********************/
+
+.user-rating {
+    .count {
+        font-weight: bolder;
+        display: inline-block;
+        padding-right: 10px;
+    }
+    .stars {
+        display: inline-block;
+        background: #000;
+        min-width: 100px;
+        height: 15px;
+        background: url("./assets/star-rating.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &.four {
+            background-position: 0 -33px;
+        }
+        &.three {
+            background-position: 0 -66px;
+        }
+        &.two {
+            background-position: 0 -99px;
+        }
+        &.one {
+            background-position: 0 -132px;
+        }
+        &.zero {
+            background-position: 0 -165px;
+        }
+    }
+}
+
+/*****************************Rating end***********************/

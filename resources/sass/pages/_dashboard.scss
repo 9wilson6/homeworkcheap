@@ -1,0 +1,146 @@
+.dashboard {
+    //@@START@@ writer section formatting
+    a {
+        text-decoration: none;
+        line-height: inherit;
+        outline: none;
+        -webkit-transition: 0.5s all ease-in-out;
+        -moz-transition: 0.5s all ease-in-out;
+        -o-transition: 0.5s all ease-in-out;
+        transition: 0.5s all ease-in-out;
+    }
+    // @@START@@ Order wraper section
+    .order-wrapper {
+        .browser-order {
+            border-radius: 7px;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 7px 30px 7px 0;
+            position: relative;
+            z-index: 10;
+            &.blue-bg {
+                // background-color: $dark-blue-2;
+                background-color: $dark-blue;
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.9rem;
+                }
+            }
+            .order,
+            .white-btn {
+                background: $white;
+                color: $dark-blue-2;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 8px 12px;
+                border-radius: 3px;
+                display: inline-block;
+                border: 1px solid $white;
+            }
+            .order {
+                transition: all 0.3s ease-out;
+                &:hover {
+                    background-color: $light-blue;
+                    color: #fff;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+    }
+    // @@END@@ Order wraper section
+
+    // @@START@@ Dashboard counts summary
+
+    &-count {
+        padding-top: 20px;
+        @include border-radius(30px);
+        a {
+            text-decoration: none;
+            color: $dark-blue-2;
+            .icon {
+                margin-right: 10px;
+                color: $white;
+                background-color: $cyan;
+                padding: 0 10px;
+                @include border-radius(5px);
+                .mdi {
+                    font-size: 2rem;
+                }
+            }
+            .text {
+                .number {
+                    font-weight: lighter;
+                    font-family: Impact, sans-serif;
+                    font-size: 1.3rem;
+                }
+                .name {
+                    color: $dark-blue-2;
+                    font-weight: bolder;
+                    font-size: 0.74rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    // @@END@@ Dashboard counts summary
+
+    // @@START@@ Writer info section
+    .writer-info {
+        margin: $section-spacing auto;
+        .white-box {
+            min-height: 150px;
+            .img-thumbnail {
+                height: 130px;
+            }
+            .name {
+                text-transform: capitalize;
+                font-size: 1.4rem;
+                font-weight: bolder;
+                color: $dark-blue-2;
+            }
+            .rating {
+                height: 15px;
+                min-width: 100px;
+                display: inline-block;
+                background: url("../assets/star-rating.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 5px 0;
+            }
+            .date-registered {
+                padding: 5px 0;
+                font-weight: 700;
+                color: $dark-blue-2;
+            }
+            .email {
+                .mdi {
+                    font-size: 1.2rem;
+                    color: $gray-500;
+                }
+            }
+
+            .message-wrapper {
+                h6 {
+                    font-size: 0.8rem;
+                    margin-bottom: 10px;
+                    font-weight: bolder;
+                    color: $dark-blue-2;
+                }
+                .rounded-circle {
+                    height: 30px;
+                    margin-right: 20px;
+                }
+                .message {
+                    font-size: 0.85rem;
+                }
+                .date {
+                    font-size: 0.7rem;
+                    color: $teal;
+                }
+            }
+        }
+    }
+    // @@END@@ Writer info section
+}

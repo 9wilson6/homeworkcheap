@@ -1,0 +1,56 @@
+.rd-container {
+    display: none;
+    margin-top: 30px;
+    border: 4px solid $gray-300;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 7px;
+    text-align: center;
+    position: relative;
+    min-width: 100px;
+    &.rd-container-attachment {
+        position: absolute;
+        .rd-date {
+            display: block;
+            .rd-month-label {
+                font-size: 1.2rem;
+            }
+        }
+        .rd-days {
+            font-size: 1.2rem;
+            .rd-days-head {
+                .rd-days-row {
+                    .rd-day-head {
+                        padding: 5px 10px;
+                        background-color: $dark-blue;
+                        color: $white;
+                    }
+                }
+            }
+            .rd-days-body {
+                .rd-days-row {
+                    background: #000;
+                    .rd-day-body {
+                        // padding: 2px 10px;
+                        &.rd-day-selected {
+                            color: $danger;
+                            border-radius: 100%;
+                            font-weight: bolder;
+                        }
+                        background: $white;
+                    }
+                }
+            }
+        }
+        .rd-time {
+            .rd-time-selected {
+                background-color: $dark-blue;
+                color: $white;
+                font-weight: bolder;
+            }
+            .rd-time-list {
+                // background: ;
+            }
+        }
+    }
+}

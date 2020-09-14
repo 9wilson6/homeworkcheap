@@ -1,0 +1,15 @@
+.pagination {
+    .page-item {
+        .page-link {
+            height: 40px;
+            &:active,
+            &:focus {
+                outline: 0;
+                border: none;
+                box-shadow: none;
+            }
+        }
+        &.active {
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.dropzone {
+  background: lighten($color: $bodycolor, $amount: 2);
+  border: 2px dashed $light-blue;
+  .dz-preview,
+  .dz-file-preview,
+  .dz-image {
+  }
+}

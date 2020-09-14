@@ -1,0 +1,49 @@
+//####Font family importation#############################
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700&display=swap");
+//#####Bootstrap importation###############################
+@import "~bootstrap/scss/bootstrap";
+/* Variables ====================================== */
+@import "variables";
+/* Material Icons ====================================== */
+@import "./css/material-design-iconic-font/css/materialdesignicons.min.css";
+/* Mixins ====================================== */
+@import "mixins";
+
+/* Root Settings ====================================== */
+@import "root";
+/* Helpers ====================================== */
+@import "helpers";
+/* Helpers ====================================== */
+@import "preloaders";
+/* pageloaders ====================================== */
+@import "pageloader";
+/* Buttons ====================================== */
+@import "buttons";
+/* Steps ====================================== */
+@import "components/steps";
+/* Tables ====================================== */
+@import "components/tables";
+/* Pagination ====================================== */
+@import "components/pagination";
+/* Files ====================================== */
+@import "components/files-input";
+/* new Order form ====================================== */
+@import "components/new-order-form";
+/* Date time picker ====================================== */
+@import "plugins/date-picker";
+/* DropZone js formatting====================================== */
+@import "plugins/dropzone";
+/* Buttons ====================================== */
+@import "alerts";
+/* Breadcrumbs ====================================== */
+@import "breadcrumb";
+/* Top bar ====================================== */
+@import "topbar";
+/* Left Sidebar ====================================== */
+@import "leftsidebar";
+/* Content  ====================================== */
+@import "content";
+/* Pages Dashboard  ====================================== */
+@import "pages/dashboard";
+/*Client order form*/
+@import "orderform";

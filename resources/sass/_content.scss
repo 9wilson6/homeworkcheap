@@ -1,0 +1,152 @@
+.content {
+  background: $bodycolor;
+  &-container {
+    min-height: 76.2vh;
+    overflow-x: hidden;
+    .container-fluid {
+      padding: 10px 20px;
+    }
+  }
+
+  &-container,
+  footer {
+    @include media-breakpoint-down(lg) {
+      padding-left: 60px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-left: 0px !important;
+    }
+    padding-left: 240px !important;
+  }
+  footer {
+    background-color: $white;
+    color: $sidebar-text-color;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  //@@show@@ section added to steps formating start
+  .white-box {
+    .highlights {
+      margin: 7px auto;
+      .text {
+        font-weight: 300;
+        font-size: 1.5rem;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        @include media-breakpoint-down(sm) {
+          font-size: 0.9rem;
+          top: 1px;
+        }
+      }
+      .id,
+      .topic {
+        background: $dark-blue-2;
+        min-width: 100px;
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+        color: $white;
+        font-size: 0.8rem;
+
+        @include border-radius(2px);
+        padding: 5px 7px;
+        @include media-breakpoint-down(sm) {
+          padding: 3px 5px;
+          font-size: 0.7rem;
+        }
+        &:after {
+          content: "";
+          width: 0px;
+          height: 0px;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-right: 10px solid $dark-blue-2;
+          border-top: 10px solid transparent;
+          position: absolute;
+          top: 50%;
+          right: 100%;
+          margin-top: -10px;
+          /* transform: rotate(40deg); */
+          @include media-breakpoint-down(sm) {
+          }
+        }
+      }
+      &.section-2 {
+        background: $dark-blue-2;
+        @include border-radius(4px);
+        color: $white;
+        padding: 10px;
+        font-size: 0.8rem;
+        .col- {
+          position: relative;
+          div {
+            // &:after {
+            //     content: "";
+            //     background: #fff;
+            //     height: 20px;
+            //     width: 2px;
+            //     position: absolute;
+            //     top: 0;
+            //     right: -50px;
+            //     @include media-breakpoint-down(md) {
+            //         display: none;
+            //     }
+            // }
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  //@@show@@ section added to steps formating end
+
+  //@@START@@ order details section start
+  .white-box {
+    .order-details {
+      background-color: $bodycolor;
+      .table {
+        tr {
+          th,
+          td {
+            width: 50% !important;
+            padding: 10px 0px !important;
+          }
+          th {
+            color: $gray-700;
+            padding-left: 10px !important;
+          }
+        }
+      }
+      .bg-unique {
+        background-color: lighten($color: $bodycolor, $amount: 10);
+      }
+    }
+    .order-details-tutor {
+      .table {
+        tr {
+          th,
+          td {
+            font-size: 0.7rem;
+            font-weight: bolder;
+          }
+          th {
+            font-size: 0.7rem;
+          }
+        }
+      }
+      // .img-container {
+      //     img {
+      //         @include media-breakpoint-down(sm) {
+      //             width: 50%;
+      //             margin: 2px auto;
+      //         }
+      //     }
+      // }
+    }
+  }
+  // @@END@@ order details section end
+}

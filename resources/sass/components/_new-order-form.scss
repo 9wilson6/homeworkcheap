@@ -1,0 +1,25 @@
+.order-form {
+  form {
+    label {
+      font-size: 0.9rem;
+      text-align: right;
+      color: $gray-600;
+    }
+    p {
+      font-style: italic;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none !important;
+      box-shadow: none;
+    }
+    input[type="file"].form-control {
+      height: 45px;
+      cursor: pointer;
+    }
+    input:read-only {
+      background-color: lighten($color: $bodycolor, $amount: 5);
+    }
+  }
+}
