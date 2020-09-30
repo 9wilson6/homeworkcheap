@@ -8,10 +8,10 @@
 @endsection
 @section('content')
   <div class="white-box order-wrapper">
-      <div class="browser-order blue-bg">
+      <div class="browser-order blue-bg mb-2 mt-2">
           Need an expert writer? There are
           <font>9</font> writers waiting for you. &nbsp;
-          <a href="{{route("client.orders.create")}}" class="order">Place New Order</a>
+          <a href="{{route("client.orders.create")}}" class="btn btn-outline-primary order">Place New Order</a>
       </div>
       <div class="row dashboard-count noselect">
           <div class="col-sm-6 col-lg-6 mb-2 mt-xl-0 col-xl-3">
@@ -20,7 +20,7 @@
                       <div class="icon"><i class="mdi mdi-clipboard-text"></i></div>
                       <div class="text ">
                           <div class="name">Orders in bidding</div>
-                          <div class="number">{{$bidding}}</div>
+                          <div class="number">{{$bidding ?? ''}}</div>
                       </div>
                   </div>
               </a>
@@ -31,7 +31,7 @@
                       <div class="icon"><i class="mdi mdi-speedometer"></i></div>
                       <div class="text ">
                           <div class="name">Orders in progress</div>
-                          <div class="number">{{$progress}}</div>
+                          <div class="number">{{$errors}}</div>
                       </div>
                   </div>
               </a>
@@ -61,7 +61,7 @@
 
       </div>
   </div>
-    <div class="writer-info">
+    <div class="writer-info mt-5">
         <div class="row">
             <div class="col-md-6">
                 <div class="white-box">
@@ -81,7 +81,7 @@
             <div class="col-md-6">
                 <div class="white-box">
                     <div class="message-wrapper">
-                        <h6 class=" text-gray-dark text-uppercase">Recent Messages</h6>
+                        <h6 class=" text-gray-dark">Recent Messages</h6>
                         <div class="d-flex">
                             <img src="{{asset("assets/user.jpg")}}" class="rounded-circle">
                             <div class="message">hello world
