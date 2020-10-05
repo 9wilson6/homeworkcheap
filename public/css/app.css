@@ -62,7 +62,7 @@ section {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.9em;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -190,7 +190,7 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 pre {
@@ -2291,7 +2291,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-text {
@@ -12605,10 +12605,9 @@ body {
 */
 
 .white-box {
-  /* background: #fff; */
+  background: #fff;
   border-radius: 7px;
   padding: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
 /*
@@ -12621,7 +12620,7 @@ body {
 
 .gray-box {
   box-sizing: border-box;
-  background: white;
+  background: #e9ecef;
   border-radius: 7px;
   padding: 10px;
 }
@@ -13346,7 +13345,7 @@ tooltips
   width: 70px;
   height: 70px;
   line-height: 65px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border: 5px solid #dee2e6;
   display: block;
   margin: 0 auto 10px auto;
@@ -13637,7 +13636,7 @@ tooltips
 */
 
 .content-breadcrumb {
-  padding-left: 13em !important;
+  padding-left: 230px !important;
 }
 
 .content-breadcrumb a {
@@ -13788,7 +13787,7 @@ tooltips
 
 .leftsidebar {
   transition: all 0.2s ease-out;
-  width: 13em;
+  width: 235px;
   z-index: 1000;
   background-color: #fff;
   box-shadow: 1px 0px 13px 0px rgba(0, 0, 0, 0.1);
@@ -13832,7 +13831,7 @@ tooltips
 
 .leftsidebar-nav ul li {
   transition: background 0.4s ease-out;
-  padding: 10px 5px 10px 10px;
+  padding: 10px 20px;
   margin: 10px;
   display: block;
   cursor: pointer;
@@ -13878,7 +13877,7 @@ tooltips
 .leftsidebar-nav ul li a {
   color: #607d8b;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 1199.98px) {
@@ -14176,16 +14175,17 @@ tooltips
 
 .dashboard .order-wrapper .browser-order {
   border-radius: 7px;
-  color: black;
+  color: #fff;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 16px;
+  font-weight: 600;
   padding: 7px 30px 7px 0;
   position: relative;
   z-index: 10;
 }
 
 .dashboard .order-wrapper .browser-order.blue-bg {
-  /* background-color: #00d3d4; */
+  background-color: #0083d9;
 }
 
 @media (max-width: 767.98px) {
@@ -14228,8 +14228,10 @@ tooltips
 }
 
 .dashboard-count a .icon {
-  margin-right: 15px;
-  color: #17a2b8;
+  margin-right: 10px;
+  color: #fff;
+  background-color: #17a2b8;
+  padding: 0 10px;
   border-radius: 5px;
 }
 
@@ -14247,7 +14249,7 @@ tooltips
   color: #1b3d4d;
   font-weight: bolder;
   font-size: 0.74rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .dashboard .writer-info {
@@ -14264,7 +14266,7 @@ tooltips
 
 .dashboard .writer-info .white-box .name {
   text-transform: capitalize;
-  font-size: 0.9em;
+  font-size: 1.4rem;
   font-weight: bolder;
   color: #1b3d4d;
 }
@@ -14283,7 +14285,6 @@ tooltips
   padding: 5px 0;
   font-weight: 700;
   color: #1b3d4d;
-  font-size: 0.9em;
 }
 
 .dashboard .writer-info .white-box .email .mdi {
@@ -14325,8 +14326,5 @@ tooltips
 .order-form .white-box .container-lg,
 .order-form .white-box .container-xl {
   background: #eaf3f7;
-}
-.order{
-  font-size: 0.7em !important;
 }
 
